@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "x-groups": [
+    { "key": "resistance", "title": "偏离阻力" },
+    { "key": "climax", "title": "高潮段落" },
+    { "key": "pacing", "title": "叙事节奏" },
+    { "key": "audio", "title": "音量" },
+    { "key": "ending", "title": "结局判定" }
+  ],
+  "properties": {
+    "resistance": {
+      "type": "object",
+      "properties": {
+        "dragThreshold": {
+          "type": "number", "default": 40, "minimum": 8, "maximum": 120,
+          "x-control": "slider", "x-step": 2, "x-label": "拖拽生效距离(px)", "x-order": 1
+        },
+        "holdLabelMs": {
+          "type": "number", "default": 700, "minimum": 150, "maximum": 2500,
+          "x-control": "slider", "x-step": 50, "x-label": "改标签长按时长(ms)", "x-order": 2
+        },
+        "holdRemoveMs": {
+          "type": "number", "default": 1200, "minimum": 300, "maximum": 4000,
+          "x-control": "slider", "x-step": 50, "x-label": "移除长按时长(ms)", "x-order": 3
+        },
+        "startStrength": {
+          "type": "number", "default": 6, "minimum": 2, "maximum": 14,
+          "x-control": "slider", "x-step": 1, "x-label": "每阶段初始力气", "x-order": 4
+        },
+        "costLabel": {
+          "type": "number", "default": 1, "minimum": 0, "maximum": 4,
+          "x-control": "slider", "x-step": 1, "x-label": "改标签消耗力气", "x-order": 5
+        },
+        "costReorder": {
+          "type": "number", "default": 1, "minimum": 0, "maximum": 4,
+          "x-control": "slider", "x-step": 1, "x-label": "重排消耗力气", "x-order": 6
+        },
+        "costRemove": {
+          "type": "number", "default": 2, "minimum": 0, "maximum": 5,
+          "x-control": "slider", "x-step": 1, "x-label": "移除消耗力气", "x-order": 7
+        }
+      }
+    },
+    "climax": {
+      "type": "object",
+      "properties": {
+        "holdSeconds": {
+          "type": "number", "default": 6, "minimum": 2, "maximum": 15,
+          "x-control": "slider", "x-step": 0.5, "x-label": "让声音安静下来需按住(秒)", "x-order": 1
+        }
+      }
+    },
+    "pacing": {
+      "type": "object",
+      "properties": {
+        "typeSpeed": {
+          "type": "number", "default": 34, "minimum": 8, "maximum": 120,
+          "x-control": "slider", "x-step": 2, "x-label": "文字浮现速度(ms/字)", "x-order": 1
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "bgmVolume": {
+          "type": "number", "default": 0.4, "minimum": 0, "maximum": 1,
+          "x-control": "slider", "x-step": 0.05, "x-label": "配乐音量", "x-order": 1
+        },
+        "ambientVolume": {
+          "type": "number", "default": 0.3, "minimum": 0, "maximum": 1,
+          "x-control": "slider", "x-step": 0.05, "x-label": "环境音音量", "x-order": 2
+        },
+        "noiseVolume": {
+          "type": "number", "default": 0.55, "minimum": 0, "maximum": 1,
+          "x-control": "slider", "x-step": 0.05, "x-label": "干扰声音量", "x-order": 3
+        }
+      }
+    },
+    "ending": {
+      "type": "object",
+      "properties": {
+        "leaveThreshold": {
+          "type": "number", "default": 7, "minimum": 3, "maximum": 20,
+          "x-control": "slider", "x-step": 1, "x-label": "「离开」结局所需偏离分", "x-order": 1
+        },
+        "pauseThreshold": {
+          "type": "number", "default": 3, "minimum": 1, "maximum": 15,
+          "x-control": "slider", "x-step": 1, "x-label": "「暂停」结局所需偏离分", "x-order": 2
+        }
+      }
+    }
+  }
+}

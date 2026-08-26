@@ -1,0 +1,26 @@
+{
+  "resistance": {
+    "dragThreshold": 40,
+    "holdLabelMs": 700,
+    "holdRemoveMs": 1200,
+    "startStrength": 6,
+    "costLabel": 1,
+    "costReorder": 1,
+    "costRemove": 2
+  },
+  "climax": {
+    "holdSeconds": 6.0
+  },
+  "pacing": {
+    "typeSpeed": 34
+  },
+  "audio": {
+    "bgmVolume": 0.4,
+    "ambientVolume": 0.3,
+    "noiseVolume": 0.55
+  },
+  "ending": {
+    "leaveThreshold": 7,
+    "pauseThreshold": 3
+  }
+}
